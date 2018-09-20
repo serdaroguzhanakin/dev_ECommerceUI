@@ -1,0 +1,18 @@
+<hr><hr>
+
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of cartList">
+        <a (click)="minus(item)" class="btn btn-danger" data-dir="dwn">
+            <span class="glyphicon glyphicon-minus"></span>
+        </a>
+        <input type="number" min="0" max="10" id="number_passengers" value={{item.ProductCount}}>
+        <a (click)="plus(item)" class="btn btn-info" data-dir="up">
+            <span class="glyphicon glyphicon-plus"></span>
+        </a>
+
+        &nbsp; Adet - {{ item.ProductName }}
+        <a (click)="removeItem(item)" class="btn btn-danger">Sil</a>&nbsp;
+        <a (click)="updateItem(item)" class="btn btn-warning">Güncelle</a>
+
+    </li>
+</ul>

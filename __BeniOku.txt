@@ -1,0 +1,46 @@
+projeye giriş : cd desktop\\projects\\udemy\\ecommerceUI
+
+vs code kurulur.
+nodejs kurulur. https://www.nodejs.org
+nodejs command ekranında : npm install -g @angular/cli  ile angular kurulur.
+angular 4 kurulur veya angular 4 e update edilir.
+ng new my-app
+cd my-app
+ng serve --open
+bootstap için cdn adresleri projeye refere edilir. index.html e include edilebilir. başka yolları da vardır.
+ctrl+c close app
+
+
+Proxy hatası : ETIMEDOUT: request to http://registry.npmjs.org/jasmine-core failed, reason: connect ETIMEDOUT 104.18.98.96:80
+
+app.module.ts : uygulamanın başladığı kısım
+app.component.html : ui tasarımının olduğu kısım
+app.component.ts : ui in back end tarafıdır
+typescript, angular 2 ile gelmiştir sonraki tüm versiyonlarda bulunur
+angular.json : bu dosya scriptleri ve css dosyalarını include edeceğimiz yerdir
+
+bootstrap cdn leri indirildi
+Html kod düzenleme : ctrl+A+K+F
+Ctrl+Shift+C ile command prompt açılır
+ctrl + k + s ile kısa yollar listelenir
+
+Oluşturulan servisler app.module tanımlanır.
+bir import işlemi yapılır 
+providers içine de ekleme yapılır
+
+oluşturulan componentler de app.modulde tanımlanmalıdır.
+routes e eklenmelidir ve component import edilir
+ngmododule declarations da da component eklenmelidir
+route ye eklediğin sayfanın default path den önce gelmesi önemlidir (en sonda bu olmalıdır : {path: '**', component: HomeComponent})
+
+componentler veya servisler arası erişim için constructor a tanımlama yapmalıyız ve gerekli impor işlemini yapmalıyız
+
+angular 6 snippets mikael morlund indir ngfor falan yazarken intellisense oluyor
+componentler html sayfalarının backendidir.
+
+örnek css class
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of cartList">
+        {{item.ProductCount}} Adet - {{ item.ProductName }}
+    </li>
+</ul>
